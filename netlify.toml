@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"  # Command to build the Vue app
+  publish = "dist"           # Directory to publish (where Vue outputs the built files)
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
