@@ -15,8 +15,8 @@ import { auth } from "../plugins/firebase.client"; // Import your Firebase confi
 export default {
   data() {
     return {
-      email: "",
-      password: "",
+      email: "e@1.com",
+      password: "123123",
     };
   },
   methods: {

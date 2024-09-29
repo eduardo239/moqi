@@ -1,32 +1,66 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
-import Login from "./components/Login.vue";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { watchEffect } from "vue";
+import { useUserStore } from "./store/UserStore";
+
+import Navbar from "./component/Navbar.vue";
+
+const store = useUserStore();
+
+// to remove
+watchEffect(() => {
+  const auth = getAuth();
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      store.user = user;
+    } else {
+      console.log("sign out");
+      store.user = null;
+    }
+  });
+});
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
-  <Login />
+  <Navbar />
+
+  <router-view></router-view>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<style>
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+body {
+  background: #2f2f2f;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+img {
+  display: block;
+}
+
+button {
+  border-radius: 4px;
+  border: 2px solid transparent;
+  padding: 0.2rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #b3e2a7;
+  color: #1d1d1d;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  min-width: 100px;
+  min-height: 40px;
+}
+button:hover {
+  border-color: #6dc5d1;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 </style>
