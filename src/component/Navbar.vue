@@ -1,10 +1,13 @@
 <template>
-  <div>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/login">Login</router-link> |
-    <router-link to="/register">Register</router-link> |
+  <ul>
+    <router-link to="/">Home</router-link>
+    |
+    <router-link to="/login">Login</router-link>
+    |
+    <router-link to="/register">Register</router-link>
+    |
     <button @click="logout">Logout</button>
-  </div>
+  </ul>
 </template>
 
 <script setup>

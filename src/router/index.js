@@ -1,13 +1,15 @@
-import { createMemoryHistory, createRouter } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 
-import HomeView from "../views/HomeView.vue";
-import LoginPage from "../component/LoginPage.vue";
-import RegisterPage from "../component/RegisterPage.vue";
+import MovieView from "../views/MovieView.vue";
+import Login from "../component/Login.vue";
+import Register from "../component/Register.vue";
+import Game from "../component/Game.vue";
 
 const routes = [
-  { path: "/", component: HomeView },
-  { path: "/login", component: LoginPage },
-  { path: "/register", component: RegisterPage },
+  { path: "/", component: MovieView },
+  { path: "/login", component: Login },
+  { path: "/register", component: Register },
+  { path: "/movie/:id", component: Game },
   {
     path: "/:pathMatch(.*)*",
     redirect: () => "/",
@@ -15,7 +17,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes,
 });
 

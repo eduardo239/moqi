@@ -1,10 +1,13 @@
 <!-- src/components/Login.vue -->
 <template>
-  <div>
+  <div class="form">
     <h2>Login</h2>
-    <input v-model="email" placeholder="Email" />
-    <input v-model="password" type="password" placeholder="Password" />
-    <button @click="login">Login</button>
+
+    <div class="flex-column">
+      <input v-model="email" placeholder="Email" />
+      <input v-model="password" type="password" placeholder="Password" />
+      <button @click="login">Login</button>
+    </div>
   </div>
 </template>
 

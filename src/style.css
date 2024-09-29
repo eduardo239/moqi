@@ -33,3 +33,24 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+
+.form {
+  max-width: 20rem;
+}
+.flex {
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+}
