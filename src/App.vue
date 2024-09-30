@@ -21,7 +21,7 @@ watchEffect(() => {
 </script>
 
 <template>
-  user id : {{ store?.user?.uid }}
+  <code> user id : {{ store?.user?.uid }} </code>
   <Navbar />
 
   <!-- Displays the active route component -->
@@ -35,14 +35,15 @@ watchEffect(() => {
   box-sizing: border-box;
 }
 
-body {
+html {
   background: #2f2f2f;
   max-width: 1280px;
-  text-align: center;
+  margin: 0 auto;
 }
 
 img {
   display: block;
+  position: relative;
 }
 
 button,
@@ -73,6 +74,11 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+button:disabled {
+  background-color: #cecece;
+  color: #a0a0a0;
+  cursor: not-allowed;
 }
 
 ul {

@@ -1,9 +1,9 @@
 <template>
-  <MovieList />
+  <GameView />
 </template>
 
 <script setup>
-import MovieList from "./MovieView.vue";
+import GameView from "./GameView.vue";
 </script>
 
 <style></style>

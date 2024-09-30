@@ -1,13 +1,14 @@
 <template>
-  <div class="form">
-    <h2>Register</h2>
-
-    <div class="flex-column">
-      <input v-model="email" placeholder="Email" />
-      <input v-model="username" type="text" placeholder="Username" />
-      <input v-model="password" type="password" placeholder="Password" />
-      <button @click="register">Register</button>
-    </div>
+  <div class="flex-center flex-v-center w-100">
+    <form class="form">
+      <h2>Register</h2>
+      <div class="flex-column">
+        <input v-model="email" placeholder="Email" />
+        <input v-model="username" type="text" placeholder="Username" />
+        <input v-model="password" type="password" placeholder="Password" />
+        <button @click="register">Register</button>
+      </div>
+    </form>
   </div>
 </template>
 

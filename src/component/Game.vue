@@ -1,22 +1,21 @@
 <template>
   <div class="grid-2">
-    <div><img :src="game.background_image" :alt="game.name" /></div>
+    <div><img :src="game?.background_image" :alt="game?.name" /></div>
     <div class="card-info">
       <div class="title">
-        <span>{{ game.name }}</span>
-        <span>({{ game.released }})</span>
+        <span>{{ game?.name }}</span>
+        <span>({{ game?.released }})</span>
       </div>
       <p class="description">
-        {{ removeHTMLTags(game.description) }}
+        {{ removeHTMLTags(game?.description) }}
       </p>
       <div class="buttons">
         <button>To Play</button>
         <button>Played</button>
       </div>
     </div>
-    <p>{{ game.metacritic }}</p>
+    <p>{{ game?.metacritic }}</p>
   </div>
-  {{ game }}
 </template>
 
 <script setup>
@@ -30,6 +29,7 @@ const game = ref(null);
 const id = route.params.id;
 
 function removeHTMLTags(str) {
+  if (!str) return str;
   return str.replace(/<\/?[^>]+(>|$)/g, ""); // RegEx to match and remove HTML tags
 }
 

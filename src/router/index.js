@@ -1,15 +1,15 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import MovieView from "../views/MovieView.vue";
+import GameView from "../views/GameView.vue";
 import Login from "../component/Login.vue";
 import Register from "../component/Register.vue";
 import Game from "../component/Game.vue";
 
 const routes = [
-  { path: "/", component: MovieView },
+  { path: "/", component: GameView },
   { path: "/login", component: Login },
   { path: "/register", component: Register },
-  { path: "/movie/:id", component: Game },
+  { path: "/game/:id", component: Game },
   {
     path: "/:pathMatch(.*)*",
     redirect: () => "/",

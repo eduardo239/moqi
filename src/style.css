@@ -35,7 +35,11 @@ h1 {
 }
 
 .form {
-  max-width: 20rem;
+  width: 20rem;
+  padding: 14px;
+  background-color: #fa9;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 .flex {
   gap: 10px;
@@ -47,10 +51,24 @@ h1 {
   gap: 10px;
   display: flex;
   flex-direction: column;
+  background-color: aqua;
+}
+.flex-center {
+  justify-content: center;
+}
+.flex-v-center {
+  align-items: center;
 }
 
 .grid-2 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 10px;
+}
+
+.w-100 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #646cff;
 }
