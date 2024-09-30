@@ -13,7 +13,6 @@ watchEffect(() => {
     if (user) {
       store.user = user;
     } else {
-      console.log("sign out");
       store.user = null;
     }
   });

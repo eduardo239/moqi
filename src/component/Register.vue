@@ -23,7 +23,6 @@ const password = ref("123123");
 
 async function register() {
   try {
-    console.log(email);
     await createUserWithEmailAndPassword(auth, email.value, password.value);
     alert("Register successful!");
   } catch (error) {
