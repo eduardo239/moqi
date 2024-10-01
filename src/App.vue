@@ -56,7 +56,7 @@ input {
 
   cursor: pointer;
   transition: border-color 0.25s;
-  min-width: 100px;
+
   min-height: 40px;
 }
 input {
@@ -84,5 +84,15 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New";
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #424242;
+  margin: 1rem 0;
 }
 </style>

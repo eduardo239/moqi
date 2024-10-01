@@ -34,6 +34,12 @@ h1 {
   line-height: 1.1;
 }
 
+/*  */
+.opacity-6 {
+  opacity: 0.6;
+}
+
+/*  */
 .form {
   width: 20rem;
   padding: 14px;
@@ -59,6 +65,9 @@ h1 {
 .flex-v-center {
   align-items: center;
 }
+.flex-v-bottom {
+  align-items: flex-end;
+}
 
 .grid-2 {
   display: grid;
@@ -71,4 +80,14 @@ h1 {
   display: flex;
   justify-content: center;
   background-color: #646cff;
+}
+
+.poster {
+  height: 150px;
+  width: 250px;
+  object-fit: cover;
+}
+
+.screenshot {
+  height: 114px;
 }

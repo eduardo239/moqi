@@ -34,6 +34,7 @@ const loading = ref(false);
 const route = useRoute();
 
 const handlePageUpdate = (newPage) => {
+  games.value = [];
   page.value = newPage;
   router.push(`?page=${page.value}`);
 };
@@ -84,16 +85,11 @@ watch(page, async (newPage, oldPage) => {
   left: 50%;
   transform: translate(-50%, -0);
   z-index: 100;
-  background: rgb(208, 255, 122);
+  background: rgb(241, 255, 215);
+  min-width: 200px;
+  text-align: center;
   margin: 7px;
   padding: 7px;
-  box-shadow: 0 0 7px 0 rgb(208, 255, 122);
-  border: 1px solid rgb(159, 214, 57);
-}
-.poster {
-  height: 200px;
-  width: 300px;
-  object-fit: cover;
 }
 
 .pagination {
