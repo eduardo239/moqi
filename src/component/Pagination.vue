@@ -1,12 +1,26 @@
 <template>
   <div class="flex flex-center">
-    <div class="pagination">
-      <button @click="updatePage(page - 1)" :disabled="page === 1">
+    <div class="flex items-center justify-center w-full p-4 gap-4">
+      <button
+        class="px-4 py-2 bg-green-500 text-white rounded-lg"
+        @click="updatePage(page - 1)"
+        :disabled="page === 1"
+      >
         Previous
       </button>
-      <button @click="changePage(page)">{{ page }}</button>
+      <button
+        class="px-4 py-2 bg-green-500 text-white rounded-lg"
+        @click="changePage(page)"
+      >
+        {{ page }}
+      </button>
 
-      <button @click="updatePage(page + 1)">Next</button>
+      <button
+        class="px-4 py-2 bg-green-500 text-white rounded-lg"
+        @click="updatePage(page + 1)"
+      >
+        Next
+      </button>
     </div>
   </div>
 </template>
@@ -26,10 +40,4 @@ const updatePage = (newPage) => {
 };
 </script>
 
-<style scoped>
-.pagination {
-  margin: 1rem 0;
-  display: flex;
-  gap: 14px;
-}
-</style>
+<style scoped></style>

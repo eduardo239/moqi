@@ -20,79 +20,12 @@ watchEffect(() => {
 </script>
 
 <template>
-  <code> user id : {{ store?.user?.uid }} </code>
   <Navbar />
-
-  <!-- Displays the active route component -->
-  <router-view></router-view>
+  <div class="bg-gray-100 min-h-screen flex align-top justify-center">
+    <div class="max-w-screen-lg w-full p-4 bg-white rounded-lg shadow-lg">
+      <router-view></router-view>
+    </div>
+  </div>
 </template>
 
-<style>
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  background: #2f2f2f;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-img {
-  display: block;
-  position: relative;
-}
-
-button,
-input {
-  border-radius: 4px;
-  border: 2px solid transparent;
-  padding: 0.2rem 1rem;
-  font-size: 0.8rem;
-  font-weight: 500;
-  font-family: inherit;
-
-  cursor: pointer;
-  transition: border-color 0.25s;
-
-  min-height: 40px;
-}
-input {
-  background-color: #fff;
-  color: #1d1d1d;
-}
-button {
-  background-color: #b3e2a7;
-  color: #1d1d1d;
-}
-button:hover {
-  border-color: #6dc5d1;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-button:disabled {
-  background-color: #cecece;
-  color: #a0a0a0;
-  cursor: not-allowed;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New";
-}
-
-hr {
-  border: none;
-  border-top: 1px solid #424242;
-  margin: 1rem 0;
-}
-</style>
+<style></style>

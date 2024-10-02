@@ -1,5 +1,7 @@
 <template>
-  <GameView />
+  <div class="w-1/2 md:w-full">
+    <GameView />
+  </div>
 </template>
 
 <script setup>

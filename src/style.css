@@ -1,11 +1,16 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+:root {
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400; */
+
+  /* color-scheme: light dark; */
+  /* color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,81 +18,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-/*  */
-.opacity-6 {
-  opacity: 0.6;
-}
-
-/*  */
-.form {
-  width: 20rem;
-  padding: 14px;
-  background-color: #fa9;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-.flex {
-  gap: 10px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.flex-column {
-  gap: 10px;
-  display: flex;
-  flex-direction: column;
-  background-color: aqua;
-}
-.flex-center {
-  justify-content: center;
-}
-.flex-v-center {
-  align-items: center;
-}
-.flex-v-bottom {
-  align-items: flex-end;
-}
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 10px;
-}
-
-.w-100 {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background-color: #646cff;
-}
-
-.poster {
-  height: 150px;
-  width: 250px;
-  object-fit: cover;
-}
-
-.screenshot {
-  height: 114px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
